@@ -3,7 +3,6 @@
 
 #include <string.h>
 
-
 class Cell
 {
 public:
@@ -11,7 +10,7 @@ public:
 
     Cell(const Cell &obj); // Копирующий конструктор
 
-    ~Cell();
+    ~Cell();asdasd
 
     auto getData();
     int setData(string data);
