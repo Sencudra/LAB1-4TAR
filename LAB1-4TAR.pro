@@ -8,7 +8,7 @@ QT       += core
 
 QT       -= gui
 
-TARGET = Vexcel
+TARGET = Lab1-4TAR
 CONFIG   += console
 CONFIG   -= app_bundle
 
@@ -16,7 +16,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    cell.cpp
+    cell.cpp \
+    table.cpp
 
 HEADERS += \
-    cell.h
+    cell.h \
+    table.h

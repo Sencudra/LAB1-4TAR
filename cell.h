@@ -1,30 +1,42 @@
+// Class Cell is a description of properties of table's cell
+// used to store string or numerical data.
+
+
 #ifndef CELL_H
 #define CELL_H
 
 #include <string.h>
+#include <iostream>
 
 class Cell
 {
 public:
-    Cell(); //Конструктор
+    Cell();                 //Default Constructor
+    Cell(const Cell &obj);  //Copy constructor
+    ~Cell();                //Destructor
 
-    Cell(const Cell &obj); // Копирующий конструктор
+    std::string getData();
+    int setData(std::string data); // Cell edit
+    int getType(){return m_type;}
 
-    ~Cell();asdasd
+private:
+    // Methods for changing private variables
+    void setType(int i){m_type = i;}
+    void setString(const std::string value){m_text = value;}
+    void setNum(const double i){m_num = i;}
 
-    auto getData();
-    int setData(string data);
+
 
 private:
 
-    int setType();
-    int setString();
-    int setNum();
+    //m_type stores type of a cell (ex. Numerical)
+    // 0 - empty
+    // 1 - string
+    // 2 - numerical
 
-private:
-    int type;
-    string text;
-    double num;
+    int m_type;
+    std::string m_text;
+    double m_num;
 };
 
 #endif // CELL_H
